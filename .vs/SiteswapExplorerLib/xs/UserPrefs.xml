@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{E1054E6E-9398-4A3A-B017-AB9D0403F011}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Siteswap/Models/Colour.cs">
+    <Files>
+      <File FileName="Siteswap/Algorithms/Arithmetic.cs" Line="1" Column="1" />
+      <File FileName="Siteswap/Algorithms/Calculations.cs" Line="1" Column="1" />
+      <File FileName="Siteswap/Algorithms/TimeReverse.cs" Line="1" Column="1" />
+      <File FileName="Siteswap/Models/Colour.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SiteswapExplorerLib" expanded="True">
+            <Node name="SiteswapLib" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Algorithms" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Colour.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="SiteswapTests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SiteswapTests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
