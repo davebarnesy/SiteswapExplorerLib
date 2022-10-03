@@ -15,7 +15,6 @@ namespace SiteswapLib
         /// Currently limited: only works for periods < 8 because the permutations
         /// calculations are not quick.
         /// </summary>
-        /// <param name="includeSelf"></param>
         /// <returns></returns>
         public List<Siteswap> Anagrams()
         {
