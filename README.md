@@ -12,7 +12,7 @@ Here's a bit of code showing how to access the most important things:
             var ss = Siteswap.Create("534");
             if (ss != null)
             {
-                // get list of possible manipulations fr the whole pattern
+                // get list of possible manipulations for the whole pattern
                 // so that'll be things like showerify, increaseall, sequences, etc
                 var patternManipulations = ss.PossibleManipulations();
 
