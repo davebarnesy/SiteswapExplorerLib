@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using SiteswapLib;
 using SiteswapLib.Extensions;
+using System.Linq;
 
 namespace SiteswapTests
 {
@@ -12,12 +13,12 @@ namespace SiteswapTests
         }
 
         [Test]
-        public void UnvalidatedPermutations()
+        public void Permutations12345()
         {
-            // just a quick check on the string extension
-            var text = "534";
-            var permutations = text.Permutations();
-            Assert.AreEqual(6, permutations.Count);
+            // Just wanted this one as a speed measure
+            var input = "12345";
+            var perms = input.GetPermutations();
+            var list = input.ToCharArray().ToList();
         }
 
         [Test]
