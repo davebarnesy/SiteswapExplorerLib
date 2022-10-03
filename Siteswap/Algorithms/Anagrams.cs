@@ -34,6 +34,7 @@ namespace SiteswapLib
                     workingList.Add(ssString);
                 }
             }
+            workingList.Sort();
             return workingList.Select(x => Siteswap.Create(x)).ToList();
         }
 
