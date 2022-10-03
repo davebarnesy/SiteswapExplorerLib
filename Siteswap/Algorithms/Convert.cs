@@ -20,7 +20,7 @@ namespace SiteswapLib
             }
         }
 
-        // todo this is flawed: limited to int64.maxValue.
+        // todo this is flawed: limited to int64.maxValue, which breaks sorting.
         public long AsLong
         {
             get
