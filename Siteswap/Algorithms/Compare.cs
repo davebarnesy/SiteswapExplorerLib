@@ -20,5 +20,25 @@ namespace SiteswapLib
             var ss2 = otherSiteswap.SortHighestFirst;
             return ss1.IsSameAs(ss2);
         }
+
+        /// <summary>
+        /// Check if newSiteswap would be equivalent to the current instance
+        /// </summary>
+        /// <param name="newSiteswap"></param>
+        /// <returns></returns>
+        private Siteswap IfNotEquivalent(Siteswap newSiteswap)
+        {
+            return IsEquivalentTo(newSiteswap) ? null : newSiteswap;
+        }
+
+        /// <summary>
+        /// Check if newSiteswap would be equivalent to the current instance
+        /// </summary>
+        /// <param name="newSiteswap"></param>
+        /// <returns></returns>
+        private Siteswap IfNotSame(Siteswap newSiteswap)
+        {
+            return IsSameAs(newSiteswap) ? null : newSiteswap;
+        }
     }
 }

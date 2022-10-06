@@ -27,7 +27,7 @@ namespace SiteswapLib
                 }
                 newItems.Reverse();
                 result.Throws = newItems;
-                return IfDifferent(result.Sanitised);
+                return IfNotEquivalent(result.Sanitised);
             }
         }
     }

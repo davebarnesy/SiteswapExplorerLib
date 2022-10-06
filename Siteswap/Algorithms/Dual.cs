@@ -19,7 +19,7 @@ namespace SiteswapLib
                     t.ReplaceDuration(newDuration);
                 }
                 result.Throws.Reverse();
-                return IfDifferent(result.Sanitised);
+                return IfNotEquivalent(result.Sanitised);
             }
         }
     }

@@ -36,6 +36,77 @@ namespace SiteswapLib
             get => Sort(highest: false);
         }
 
+        /// <summary>
+        /// Shift Left but only give a result if it's different
+        /// to keep the manipulations list as short as possible
+        /// </summary>
+        public Siteswap ShiftLeftManipulation
+        {
+            get
+            {
+                if (AutoSort)
+                {
+                    // there's no point rotating because autosort will cancel it out.
+                    return null;
+                }
+                return IfNotSame(ShiftLeft);
+            }
+        }
+
+        /// <summary>
+        /// Shift Left but only give a result if it's different
+        /// to keep the manipulations list as short as possible
+        /// </summary>
+        public Siteswap ShiftRightManipulation
+        {
+            get
+            {
+                if (AutoSort)
+                {
+                    // there's no point rotating because autosort will cancel it out.
+                    return null;
+                }
+                return IfNotSame(ShiftRight);
+            }
+        }
+
+
+        /// <summary>
+        /// shift any siteswap one position to the left
+        /// </summary>
+        public Siteswap ShiftLeft
+        {
+            get
+            {
+                return ShiftOnePosition(forward: true);
+            }
+        }
+
+        /// <summary>
+        /// shift any siteswap one position to the right
+        /// </summary>
+        public Siteswap ShiftRight
+        {
+            get
+            {
+                return ShiftOnePosition(forward: false);
+            }
+        }
+
+        /// <summary>
+        /// 534 becomes: forward: 435, !forward: 345
+        /// </summary>
+        /// <param name="forward"></param>
+        /// <returns></returns>
+        private Siteswap ShiftOnePosition(bool forward)
+        {
+            if (Period < 2)
+            {
+                return null;
+            }
+            return RotateToStart(forward ? 1 : Period - 1, force: true);
+        }
+
         private Siteswap Sort(bool highest)
         {
             if (Throws.AllSame())
@@ -54,8 +125,12 @@ namespace SiteswapLib
         /// <returns></returns>
         public Siteswap RotateToStart(int throwIndex, bool force = false)
         {
-            // this is only for when autosort is off
-            if (AutoSort || force)
+
+            // todo: force check here is wrong
+
+            // this manipulation is only for when autosort is off
+            // or for when it's on but we've forced it to work
+            if (AutoSort && !force)
             {
                 return null;
             }
@@ -67,7 +142,7 @@ namespace SiteswapLib
             }
 
             // already at start
-            if (throwIndex == 0)
+            if (throwIndex == 0 && !force)
             {
                 return null;
             }
@@ -76,7 +151,6 @@ namespace SiteswapLib
             return Create(sub).Sanitised;
 
         }
-
 
     }
 }

@@ -25,9 +25,5 @@ namespace SiteswapLib
             get => Throws.OrderBy(x => x.Duration).FirstOrDefault().Duration;
         }
 
-        private Siteswap IfDifferent(Siteswap newSiteswap)
-        {
-            return IsEquivalentTo(newSiteswap) ? null : newSiteswap;
-        }
     }
 }

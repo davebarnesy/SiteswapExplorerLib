@@ -28,6 +28,8 @@
                 Manipulation.Delete => "Delete",
                 Manipulation.IncreaseAll => "Increase all",
                 Manipulation.DecreaseAll => "Decrease all",
+                Manipulation.ShiftLeft => "Shift left",
+                Manipulation.ShiftRight => "Shift right",
                 Manipulation.Insert => "Insert",
                 Manipulation.AddCycle => "Add cycle",
                 Manipulation.RemoveCycle => "Remove cycle",

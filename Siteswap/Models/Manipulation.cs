@@ -28,6 +28,8 @@
         ExtendDown,
         TruncateHighest,
         TruncateLowest,
+        ShiftLeft,
+        ShiftRight,
         Reset,
 
     }

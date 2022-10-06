@@ -37,5 +37,32 @@ namespace SiteswapTests
 
         }
 
+        [Test]
+        public void ShiftLeft()
+        {
+            Siteswap.Create("534").RunTest(x =>
+            {
+                Assert.AreEqual("345", x.ShiftLeft.AsString);
+            });
+        }
+
+        [Test]
+        public void ShiftRight()
+        {
+            Siteswap.Create("534").RunTest(x =>
+            {
+                Assert.AreEqual("453", x.ShiftRight.AsString);
+            });
+        }
+
+        [Test]
+        public void ShiftRightPeriod1()
+        {
+            Siteswap.Create("7").RunTest(x =>
+            {
+                Assert.IsNull(x.ShiftRight);
+            });
+        }
+
     }
 }
