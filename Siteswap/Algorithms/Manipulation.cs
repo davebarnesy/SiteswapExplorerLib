@@ -38,8 +38,8 @@ namespace SiteswapLib
                     Manipulation.ExtendDown => ExtendDown,
                     Manipulation.TruncateHighest => TruncateHighest,
                     Manipulation.TruncateLowest => TruncateLowest,
-                    Manipulation.ShiftLeft => ShiftLeft,
-                    Manipulation.ShiftRight => ShiftRight,
+                    Manipulation.ShiftLeft => ShiftLeftManipulation,
+                    Manipulation.ShiftRight => ShiftRightManipulation,
                     Manipulation.Reset => Reset,
                     _ => null,
                 };

@@ -102,7 +102,7 @@ namespace SiteswapLib
         {
             if (Period < 2)
             {
-                return null;
+                return this;
             }
             return RotateToStart(forward ? 1 : Period - 1, force: true);
         }

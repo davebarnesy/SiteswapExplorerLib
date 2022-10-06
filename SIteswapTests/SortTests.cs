@@ -60,7 +60,7 @@ namespace SiteswapTests
         {
             Siteswap.Create("7").RunTest(x =>
             {
-                Assert.IsNull(x.ShiftRight);
+                Assert.IsNull(x.ShiftRightManipulation);
             });
         }
 
