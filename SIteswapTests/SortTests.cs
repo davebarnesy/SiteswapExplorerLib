@@ -64,5 +64,26 @@ namespace SiteswapTests
             });
         }
 
+        [Test]
+        public void ShiftRightPeriod2()
+        {
+            // should return null. Period 2 means we want 'Shift'.
+            Siteswap.Create("71").RunTest(x =>
+            {
+                Assert.IsNull(x.ShiftRightManipulation);
+            });
+        }
+
+        [Test]
+        public void Shift()
+        {
+            // should return null. Period 2 means we want 'Shift'.
+            Siteswap.Create("71").RunTest(x =>
+            {
+                Assert.AreEqual("17", x.ShiftManipulation.AsString);
+            });
+        }
+
+
     }
 }

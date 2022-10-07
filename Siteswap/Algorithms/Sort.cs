@@ -44,9 +44,8 @@ namespace SiteswapLib
         {
             get
             {
-                if (AutoSort)
+                if (AutoSort || Period == 2)
                 {
-                    // there's no point rotating because autosort will cancel it out.
                     return null;
                 }
                 return IfNotSame(ShiftLeft);
@@ -61,12 +60,27 @@ namespace SiteswapLib
         {
             get
             {
-                if (AutoSort)
+                if (AutoSort || Period == 2)
                 {
-                    // there's no point rotating because autosort will cancel it out.
                     return null;
                 }
                 return IfNotSame(ShiftRight);
+            }
+        }
+
+        /// <summary>
+        /// Only responds when period is 2 so we don't get shift left
+        /// and shift right, both containing the same result.
+        /// </summary>
+        public Siteswap ShiftManipulation
+        {
+            get
+            {
+                if (AutoSort || Period > 2)
+                {
+                    return null;
+                }
+                return IfNotSame(ShiftLeft);
             }
         }
 

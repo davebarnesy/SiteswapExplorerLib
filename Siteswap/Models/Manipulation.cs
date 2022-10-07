@@ -30,6 +30,7 @@
         TruncateLowest,
         ShiftLeft,
         ShiftRight,
+        Shift,
         Reset,
 
     }

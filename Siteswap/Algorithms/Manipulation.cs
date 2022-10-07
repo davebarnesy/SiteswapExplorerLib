@@ -40,6 +40,7 @@ namespace SiteswapLib
                     Manipulation.TruncateLowest => TruncateLowest,
                     Manipulation.ShiftLeft => ShiftLeftManipulation,
                     Manipulation.ShiftRight => ShiftRightManipulation,
+                    Manipulation.Shift => ShiftManipulation,
                     Manipulation.Reset => Reset,
                     _ => null,
                 };
