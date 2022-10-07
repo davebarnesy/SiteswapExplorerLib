@@ -80,7 +80,11 @@ namespace SiteswapLib
         }
 
         /// <summary>
+        /// Get list of possible manipulations for pattern or a single throw
+        /// by doing every manipulation provided by Manipulate(manipulation, int).
         /// 
+        /// All the algorithms try to return null if they fail validation,
+        /// so here we get a list of the ones that returned something.
         /// </summary>
         /// <param name="throwIndex"></param>
         /// <returns></returns>
@@ -88,7 +92,6 @@ namespace SiteswapLib
         {
             return Enum.GetValues(typeof(Manipulation))
                 .Cast<Manipulation>()
-                .ToList()
                 .Select(manip => ManipulationResult(manip, throwIndex))
                 .OfType<ManipulationResult>() // strip out nulls
                 .ToList();
