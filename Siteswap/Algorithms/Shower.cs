@@ -10,6 +10,12 @@ namespace SiteswapLib
         {
             get
             {
+
+                if (FourHanded)
+                {
+                    return null;
+                }
+
                 // If alternating throws are ones, it's probably already a shower
                 if (Throws.OddIndexes().AllEqualTo(duration: 1) || Throws.EvenIndexes().AllEqualTo(duration: 1))
                 {
@@ -24,6 +30,11 @@ namespace SiteswapLib
         {
             get
             {
+                if (FourHanded)
+                {
+                    return null;
+                }
+
                 // If alternating throws are zeroes, it's already one handed
                 if (Throws.OddIndexes().AllEqualTo(duration: 0) || Throws.EvenIndexes().AllEqualTo(duration: 0))
                 {
@@ -37,6 +48,10 @@ namespace SiteswapLib
         {
             get
             {
+                if (FourHanded)
+                {
+                    return null;
+                }
                 return RemoveAlternatingPatternAndHalve(shower: true);
             }
         }
@@ -45,6 +60,10 @@ namespace SiteswapLib
         {
             get
             {
+                if (FourHanded)
+                {
+                    return null;
+                }
                 return RemoveAlternatingPatternAndHalve(shower: false);
 
             }
