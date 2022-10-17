@@ -10,6 +10,8 @@
         public static bool Slomo = false;
         public static bool AnimatorEnabled = false;
         public static bool ChartEnabled = false;
+        public static bool ViewSwitchable = false;
+        public static bool ViewSwitchState = false;
         public static bool FourHanded = false; // experimental
     }
 }
