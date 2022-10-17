@@ -43,7 +43,7 @@ namespace SiteswapLib
 
         public static Siteswap Reset
         {
-            get => Create("33");
+            get => Create(FourHanded ? "55" : "33");
         }
 
         public List<ThrowCellViewModel> CellViewModels
