@@ -1,13 +1,8 @@
 ﻿namespace SiteswapLib
 {
-    public class ControlsViewModel
+    public class ControlsViewModel: BaseCellViewModel
     {
-        public readonly Siteswap Siteswap;
-
-        public ControlsViewModel(Siteswap siteswap)
-        {
-            Siteswap = siteswap;
-        }
+        public ControlsViewModel(Siteswap siteswap) : base(siteswap) { }
 
         public Siteswap IncreaseAllResult => Siteswap.IncreaseAll;
         public Siteswap DecreaseAllResult => Siteswap.DecreaseAll;

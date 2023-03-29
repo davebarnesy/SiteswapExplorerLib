@@ -21,7 +21,7 @@ namespace SiteswapLib
                 return new Colour[] {
                     new Colour() { name = "red", value = "ff0900" },
                     new Colour() { name = "blue", value = "4343ff" },
-                    new Colour() { name = "yellow", value = "e3c710" },
+                    new Colour() { name = "yellow", value = "fcda03" },
                     new Colour() { name = "green", value = "3cb44b" },
                     new Colour() { name = "orange", value = "f58231" },
                     new Colour() { name = "purple", value = "911eb4" },

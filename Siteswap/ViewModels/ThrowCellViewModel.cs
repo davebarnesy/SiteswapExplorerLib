@@ -9,10 +9,8 @@ namespace SiteswapLib
     /// Doesn't handle updates - when siteswap changes, just generate a new list.
     /// </summary>
     ///
-    public class ThrowCellViewModel
+    public class ThrowCellViewModel: BaseCellViewModel
     {
-
-        public readonly Siteswap Siteswap;
         public readonly int ThrowIndex;
         public readonly int ThrowOrbit;
         public readonly List<ManipulationResult> Manipulations;
@@ -22,15 +20,12 @@ namespace SiteswapLib
             return new ThrowCellViewModel(siteswap, throwIndex, throwOrbit);
         }
 
-        private ThrowCellViewModel(Siteswap siteswap, int throwIndex, int throwOrbit)
+        private ThrowCellViewModel(Siteswap siteswap, int throwIndex, int throwOrbit) : base(siteswap)
         {
-            Siteswap = siteswap;
             ThrowIndex = throwIndex;
             ThrowOrbit = throwOrbit;
             Manipulations = Siteswap.PossibleManipulations(throwIndex);
         }
-
-        private ThrowCellViewModel() { }
 
         private ManipulationResult Check(Manipulation manipulation)
         {

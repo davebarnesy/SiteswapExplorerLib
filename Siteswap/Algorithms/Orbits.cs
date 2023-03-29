@@ -9,6 +9,8 @@ namespace SiteswapLib
 
         public Siteswap RemoveOrbit(int index)
         {
+
+            // todo - look into not offering this when the orbit is zeroes
             var orbits = Orbits;
             var result = Duplicate;
 
